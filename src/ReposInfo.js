@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import './Repos.css'
 
-// {組件}倉庫-信息
+// {組件}倉庫-詳細內容
 function ReposInfo() {
   const getInfo = useLocation().state
   const [isLoaded, setIsLoaded] = useState(false)

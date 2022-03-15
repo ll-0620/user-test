@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="home">
       <img className='pageImg' src={require("./image/rabbit.png")} alt='lai mao' />
-      <p>HELLO! This is home page.</p>
+      <p>HOME PAGE - HELLO!</p>
       <ul className='home-list'>
         <li>
           <Link to='/user'>

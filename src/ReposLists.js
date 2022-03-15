@@ -3,10 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import './Repos.css'
 
-// {組件}用戶倉庫列表-點擊名稱查看信息
-/**
- * 
- */
+// {組件}用戶倉庫列表-點擊名稱查看更多
 
 let page = 1
 
@@ -18,10 +15,9 @@ function ReposLists() {
   const [num, setNum] = useState(-1)
   const navigation = useNavigate();
 
-
-  // 處理懶加載
-  const [hasMore, setHasMore] = useState(true) //判斷API是否還有數據，通過接口設置。 
-  const [getPage, setGetPage] = useState(1)
+  // 處理lazy load
+  const [hasMore, setHasMore] = useState(true) //判斷是否還有數據。 
+  const [getPage, setGetPage] = useState(1) 
 
   const End = () => {
     setHasMore(false)

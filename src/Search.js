@@ -6,9 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 /**
- * Search: 搜索功能(查詢github用戶名)
- * 使用嵌套功能(搜索欄部分不變)
- * 默認: yuchu(ll-0620)
+ * 搜索功能(查詢github用戶名)
+ * 默認: ll-0620
  * */
 
 const username = 'll-0620' //查詢的用戶
