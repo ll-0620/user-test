@@ -13,7 +13,7 @@ function Home() {
       <p>HOME PAGE - HELLO!</p>
       <ul className='home-list'>
         <li>
-          <Link to='/user'>
+          <Link to='/users'>
             Click here for searching github user's information
           </Link>
         </li>
@@ -37,14 +37,14 @@ function App() {
     <Router>
       <nav style={{margin: 10}}>
         <Link to='/' style={{ marginRight: 10 }}>Home</Link>
-        <Link to='/user' style={{ marginRight: 10 }}>Search user</Link>
+        <Link to='/users' style={{ marginRight: 10 }}>Search user</Link>
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/user' element={<SearchUserPage />} />
-        <Route path='/user/:username' element={<UserInfo />} />
-        <Route path='/user/:username/repos' element={<ReposLists />} />
-        <Route path='/user/:username/repos/:repo' element={<ReposInfo />} />
+        <Route path='/users' element={<SearchUserPage />} />
+        <Route path='/users/:username' element={<UserInfo />} />
+        <Route path='/users/:username/repos' element={<ReposLists />} />
+        <Route path='/users/:username/repos/:repo' element={<ReposInfo />} />
         <Route path='*' element={<Page404 />} />
       </Routes>
     </Router>

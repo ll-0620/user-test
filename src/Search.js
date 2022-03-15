@@ -38,7 +38,7 @@ function SearchUserPage() {
 
   useEffect(() => {
     if (count !== 0) {
-      navigation(`/user/${user.username}`, { state: user });  
+      navigation(`/users/${user.username}`, { state: user });  
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count])

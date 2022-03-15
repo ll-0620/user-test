@@ -85,7 +85,7 @@ function ReposLists() {
   useEffect(() => {
     if (click === true) {
       const repo = repos.list[num]
-      navigation(`/user/${repos_data.user}/repos/${repo.name}`, {
+      navigation(`/users/${repos_data.user}/repos/${repo.name}`, {
         state: {
           repo_name: repo.name,
           repo_user: repos_data.user
