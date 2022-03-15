@@ -15,8 +15,8 @@ I have deploy to the online environment: http://laimao.xyz
   4. axios
   5. bootstrap (still learning)
 * **實現功能:**
-  1. 通過 github REST API 查詢用戶及其倉庫資料
+  1. 通過 github REST API 查詢用戶及其倉庫資料 [structure](./structure-image.jpg)
   2. 待增加... 
 * 項目使用的圖片來自 https://iconfont.cn , 作者 ChenCJ 的<像素遊戲圖標>
-  
+
   
