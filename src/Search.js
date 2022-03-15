@@ -24,10 +24,10 @@ function SearchUserPage() {
       setUser({
         username: response.data.login,
         location: response.data.location || "unknown",
-        followers: response.data.followers || "unknown",
-        following: response.data.following || "unknown",
+        followers: response.data.followers || 0,
+        following: response.data.following || 0,
         github_page: response.data.html_url,
-        public_repos: response.data.public_repos || "unknown",
+        public_repos: response.data.public_repos || 0,
         github_repository: response.data.repos_url
       })
       setCount(1)
@@ -39,7 +39,6 @@ function SearchUserPage() {
 
   useEffect(() => {
     if (count !== 0) {
-      console.log('search=>', user)
       navigation(`/user/${user.username}`, { state: user });  
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps

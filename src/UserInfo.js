@@ -23,7 +23,6 @@ function UserInfo() {
       user: user_data.username
     }
     if (click === true) {
-      console.log(data)
       navigation(`/user/${user_data.username}/repos`, { state: data }) 
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps

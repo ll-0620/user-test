@@ -11,7 +11,6 @@ function ReposInfo() {
 
   useEffect(() => {
     axios.get(`https://api.github.com/repos/${getInfo.repo_user}/${getInfo.repo_name}`).then(function (response) {
-      console.log('get!', response.data)
       const list = response.data
       setRepoInfo ({
         full_name: list.full_name,

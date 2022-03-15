@@ -22,6 +22,11 @@ function ReposLists() {
   // 處理懶加載
   const [hasMore, setHasMore] = useState(true) //判斷API是否還有數據，通過接口設置。 
   const [getPage, setGetPage] = useState(1)
+
+  const End = () => {
+    setHasMore(false)
+    return
+  }
   
   const GetData = () => {
     if(!hasMore) return
@@ -31,15 +36,13 @@ function ReposLists() {
         page: getPage
       }
     }).then(function (response) {
-      if (response.data.length<10) {
-        setHasMore(false)
-        return
-      } 
+      if (repos_data === []) End()
       let temp = repos.list || []
       setRepos({
         list: temp.concat(response.data),
       });
       setIsLoaded(true)
+      if (response.data.length < 10) End()
       page++
     }).catch(function (error) {
       console.log(error);
@@ -82,7 +85,7 @@ function ReposLists() {
     }
   }
   
-  //當組件輸出到 DOM 後會執行 componentDidMount()
+  //等同於 class 中執行 componentDidMount()
   useEffect(() => {
     if (click === true) {
       const repo = repos.list[num]
@@ -120,7 +123,7 @@ function ReposLists() {
             </tbody>
           </table>  
         </div>
-        <p id="end">page {getPage}<i class="fas fa-allergies    "></i></p>
+        <p id="end">page {page}</p>
       </div>
     )
   }
