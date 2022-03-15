@@ -1,3 +1,27 @@
+.search-box{
+  margin-top: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-user{
+  border-radius: 3px;
+  height: 26px;
+  width: 66px;
+  border: none;
+}
+
+.search-user:hover{
+  background-color: rgb(104, 104, 104);
+  color: #ffffff;
+}
+
+label{
+  font-size: 18px;
+}
+
 #input{
-  margin: 0 5px;
+  margin: 0 10px;
 }

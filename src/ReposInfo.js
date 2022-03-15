@@ -35,7 +35,10 @@ function ReposInfo() {
   } else {
     return (
       <div>
-        <h2>{getInfo.repo_name}</h2>
+        <h2 className='row-in-line'>
+          <img className='userImg' src={require("./image/winner.png")} alt='end' />
+          {getInfo.repo_name}
+        </h2>
         <ul>
           <li>owner: {getInfo.repo_user}</li>
           <li>full_name: {repoInfo.full_name}</li>

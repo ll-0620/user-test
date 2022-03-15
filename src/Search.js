@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
  * 默認: yuchu(ll-0620)
  * */
 
-const username = 'Ebazhanov' //查詢的用戶
+const username = 'll-0620' //查詢的用戶
 
 function SearchUserPage() {
   const [user, setUser] = useState({});
@@ -44,13 +44,12 @@ function SearchUserPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count])
   
-  
-
   return (
-    <div className="search_box">
-      <label>username:</label>
+    <div className="search-box">
+      <img className='userImg' src={require("./image/cat.png")} alt='user' />
+      <label>User name</label>
       <input id="input" name="name" placeholder={username} />
-      <button className="search_user" onClick={() => { search() }}>search</button>
+      <button className="search-user" onClick={() => { search() }}>search</button>
       <div id="none"></div>
     </div>
   )

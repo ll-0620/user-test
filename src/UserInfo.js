@@ -32,18 +32,24 @@ function UserInfo() {
 
   return (
     <div>
-      <h2>User: {user_data.username}</h2>
+      <h2 className='row-in-line'>
+        User
+        <img className='userImg' src={require("./image/game.png")} alt='user' />
+        {user_data.username}
+      </h2>
       <ul>
         <li>Location: {user_data.location}</li>
         <li>followers: {user_data.followers} </li>
         <li>following: {user_data.following} </li>
-        <li>github page:
+        <li>github page: {" "}
           <a href={user_data.github_page} target="_blank" rel="noreferrer">
             {user_data.github_page}
           </a>
         </li>
         <li>github repositories: {user_data.public_repos}</li>
-        <p className="look" onClick={() => setclick(true)}> p.s. look for github repositories</p>
+        <p className="look" onClick={() => setclick(true)}>
+          p.s. Click here for more github repositories' details
+        </p>
       </ul>
     </div>
   )  

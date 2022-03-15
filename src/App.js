@@ -9,9 +9,14 @@ import ReposInfo from './ReposInfo';
 function Home() {
   return (
     <div className="home">
-      <p>HELLO! this is home page</p>
-      <ul>
-        <li>you can search for github user's information</li>
+      <img className='pageImg' src={require("./image/rabbit.png")} alt='lai mao' />
+      <p>HELLO! This is home page.</p>
+      <ul className='home-list'>
+        <li>
+          <Link to='/user'>
+            Click here for searching github user's information
+          </Link>
+        </li>
       </ul>
     </div>
   )

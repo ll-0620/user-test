@@ -14,8 +14,20 @@ code {
     monospace;
 }
 
-#root{
+#root {
   width: 600px;
   margin-top: 10px;
 }
 
+.row-in-line {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */ 
+  align-items: center;
+}
+
+.userImg{
+  margin: 5px;
+  width: 24px;
+  height: 24px;
+}

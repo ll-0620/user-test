@@ -58,7 +58,7 @@ function ReposLists() {
         return (
           <tr key={i} className='hi'>
             <td>{i+1}</td>
-            <td className='look' onClick={() => {
+            <td id='look' onClick={() => {
               setNum(i)
               setClick(true)
             }}>{repos.name}</td>
@@ -106,7 +106,11 @@ function ReposLists() {
   } else {
     return (
       <div>
-        <p className="user">user: {repos_data.user}</p>
+        <p className="user row-in-line">
+          user
+          <img className='userImg' src={require("./image/flag.png")} alt='user' />
+          {repos_data.user}
+        </p>
         <div className="roll" id="scroll"
           onScrollCapture={() => {handleScroll()}}>
           <table className="table table-bordered">
