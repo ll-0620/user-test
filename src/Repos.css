@@ -1,0 +1,40 @@
+.roll{
+  height: 300px;
+  overflow-y: overlay;
+}
+
+.table{
+  width: 600px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.user{
+  font-size: 20px;
+}
+
+.block{
+  width: 500px;
+}
+
+.hi{
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.look{
+  color: rgb(0, 0, 0);
+  text-decoration: none
+}
+
+.look:hover{
+  color: rgb(77, 77, 253);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#end{
+  text-align: center;
+  margin-top: 10px;
+  /* display: none; */
+}
